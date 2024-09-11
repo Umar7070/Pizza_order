@@ -1,9 +1,14 @@
-import React from 'react'
+'use client'
+
+import { UserContext } from '@/context/MyContext'
+import React, { useContext } from 'react'
+
 
 const Products = () => {
+  const {value}= useContext(UserContext);
   return (
     <div>
-        products pages
+        <h1>my name is mohammad {value}</h1>
       
     </div>
   )

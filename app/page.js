@@ -1,9 +1,11 @@
 "use client";
 
+import { UserContext } from "@/context/MyContext";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 const page = () => {
+  const {curEle,handleclick}= useContext(UserContext)
   const [product, setProduct] = useState([]);
   console.log(product);
   const getapi = async () => {
@@ -21,7 +23,7 @@ const page = () => {
           {product.map((curEle, index) => {
             return (
               <>
-                <div className=" w-[80%] border border-red-500 p-3">
+                <div className="  border shadow-lg  p-3">
                   <img src={curEle.thumbnail} className="h-[150px] w-[100%] " />
                   <div className="text-center">
                     <h2 className=" font-bold  text-sm my-1">Havana spacal</h2>
@@ -29,8 +31,11 @@ const page = () => {
                   </div>
                   <div className="flex justify-between p-1 my-1">
                     <p className="font-bold">$5</p>
-                    <button className="bg-yellow-500 w-[50px] text-white rounded-full hover:bg-green-700 hover:text-white">
-                      add
+                    <button
+                      className="bg-yellow-500 w-[50px] text-white rounded-full hover:bg-green-700 hover:text-white"
+                      onClick={() => handleclick(curEle)}
+                    >
+                      Add
                     </button>
                   </div>
                 </div>
