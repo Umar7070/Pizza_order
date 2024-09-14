@@ -1,14 +1,11 @@
-'use client'
-
-import { UserContext } from '@/context/MyContext'
-import React, { useContext } from 'react'
-
+import React from 'react'
+import HomeProduct from '../components/HomeProduct'
 
 const Products = () => {
-  const {value}= useContext(UserContext);
   return (
     <div>
-        <h1>my name is mohammad {value}</h1>
+        products page
+        <HomeProduct/>
       
     </div>
   )
