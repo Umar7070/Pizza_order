@@ -9,7 +9,7 @@ const Navbar = () => {
           <img src="/img/logo.png" />
         </Link>
         <div className="flex items-center gap-10 capitalize font-bold">
-          <Link href="/home">home</Link>
+          <Link href="/">home</Link>
           <Link href="/products">products</Link>
           <Link href='cart' className="flex  items-center bg-yellow-600 w-[65px] justify-center gap-1 rounded-full">
             <span className="text-white">10</span>
