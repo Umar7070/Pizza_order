@@ -41,7 +41,7 @@ const Cart = () => {
         <hr />
         <div className="flex justify-end gap-6">
           <h4>gran total </h4> <span> 1000 </span>
-          <button className="w-[100px] text-white bg-yellow-400 capitalize rounded-full">order now</button>
+          <button className="w-[100px] text-white bg-yellow-400  rounded-full capitalize">order now</button>
         </div>
       </div>
     </>

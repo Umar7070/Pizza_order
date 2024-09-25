@@ -9,7 +9,7 @@ const page = () => {
           <em className="text-2xl capitalize">are you hungry ?</em>
           <h1 className="text-4xl font-bold">Don't Wait !</h1>
           <div>
-            <button className="bg-yellow-500 w-[100px] rounded-full text-white h-[30px] my-2">
+            <button className="bg-yellow-500  rounded-full text-white px-3 p-1 my-2 capitalize">
               order now
             </button>
           </div>
