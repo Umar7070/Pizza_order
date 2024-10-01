@@ -2,8 +2,8 @@
 
 import React, { createContext, useState } from "react";
 export const UserContext = createContext();
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+// import "react-toastify/dist/ReactToastify.css";
+import toast, { Toaster } from 'react-hot-toast';
 
 const MyContext = ({ children }) => {
   const [addItem, setAddItem] = useState([]);
@@ -31,7 +31,7 @@ const MyContext = ({ children }) => {
     const deletItem = addItem.filter((item) => {
       return ele.id !== item.id;
     });
-    toast.error("cart item is deleted", {
+    toast.error("your cart item is deleted", {
       position: "top-center",
       autoClose: 1000,
     });
@@ -92,7 +92,7 @@ const MyContext = ({ children }) => {
       }}
     >
       {children}
-      <ToastContainer />
+      <Toaster />
     </UserContext.Provider>
   );
 };
