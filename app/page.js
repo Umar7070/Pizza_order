@@ -1,12 +1,20 @@
-
+'use client'
 import React from "react";
 import HomeProduct from "./components/HomeProduct";
 import Link from "next/link";
+import { motion,easeIn } from "framer-motion";
 
 const page = () => {
   return (
     <>
-      <div className="container my-10 flex flex-col md:flex-row justify-between items-center">
+      <motion.div  
+      
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2, duration: 0.4, ease: easeIn },
+      }}
+      className="container my-10 flex flex-col md:flex-row justify-between items-center">
         {/* Text Section */}
         <div className="flex flex-col gap-2 text-center md:text-left">
           <em className="text-xl md:text-2xl capitalize text-red-400">Are you hungry?</em>
@@ -22,7 +30,7 @@ const page = () => {
         <div className="mt-5 md:mt-0">
           <img src="/img/pizza.png" alt="Pizza" className="w-48 md:w-64 lg:w-72" />
         </div>
-      </div>
+      </motion.div>
       
       {/* HomeProduct Component */}
       <HomeProduct />

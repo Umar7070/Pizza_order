@@ -2,6 +2,7 @@
 import { UserContext } from "@/context/MyContext";
 import React, { useContext, useState } from "react";
 import { AiOutlineDelete } from "react-icons/ai";
+import { motion,easeIn } from "framer-motion";
 
 const Cart = () => {
   const {
@@ -22,7 +23,14 @@ const Cart = () => {
   setTotal(subTotal);
   return (
     <>
-      <div className="container mx-auto p-4">
+      <motion.div
+       initial={{ opacity: 0 }}
+       animate={{
+         opacity: 1,
+         transition: { delay: 2, duration: 1, ease: easeIn },
+       }}
+      
+      className="container mx-auto p-4">
         <div className="container flex justify-between items-center bg-gray-800 text-white p-2">
           <span>Cart Calculation</span>
           <button
@@ -130,7 +138,7 @@ const Cart = () => {
         </div>
           </>
         )}
-      </div>
+      </motion.div>
     </>
   );
 };

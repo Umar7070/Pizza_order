@@ -4,6 +4,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import Cardsdata from "@/constant/constant";
 import { UserContext } from "@/context/MyContext";
+import { motion,easeIn } from "framer-motion";
 
 const HomeProduct = () => {
   const { handleClick, isAdding } = useContext(UserContext);
@@ -25,7 +26,14 @@ const HomeProduct = () => {
            <div className="w-6 h-6 border-4 border-blue-400 border-solid border-t-transparent rounded-full animate-spin"></div>
         </div>
       ) : (
-        <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pb-2 gap-5">
+        <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 2, duration: 0.4, ease: easeIn },
+        }}
+        
+        className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pb-2 gap-5">
           {Cardsdata.map((curEle, index) => {
             return (
               <div key={index}>
@@ -63,7 +71,7 @@ const HomeProduct = () => {
               </div>
             );
           })}
-        </div>
+        </motion.div>
       )}
     </>
   );
