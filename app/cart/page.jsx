@@ -182,11 +182,12 @@ const Cart = () => {
         {/* Cart Header */}
         <div className="flex justify-between items-center bg-gray-800 text-white p-2 rounded-lg">
           <span>Cart Calculation</span>
+
           <button
             onClick={clearAll}
-            className="flex items-center bg-red-600 px-4 py-2 rounded-md text-sm md:text-base"
+            className="flex items-center bg-red-600 px-2 py-1 md:px-4 md:py-2 rounded-md text-xs md:text-base"
           >
-            <AiOutlineDelete className="mx-2 text-xl" />
+            <AiOutlineDelete className="mx-1 md:mx-2 text-lg md:text-xl" />
             <span className="capitalize">empty cart</span>
           </button>
         </div>
