@@ -8,12 +8,10 @@ import { motion,easeIn } from "framer-motion";
 
 const HomeProduct = () => {
   const { handleClick, isAdding } = useContext(UserContext);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
+    }, 500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -21,16 +19,13 @@ const HomeProduct = () => {
 
   return (
     <>
-      {loading ? (
-        <div className="flex justify-center ">
-           <div className="w-6 h-6 border-4 border-blue-400 border-solid border-t-transparent rounded-full animate-spin"></div>
-        </div>
-      ) : (
+     
         <motion.div
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { delay: 2, duration: 0.4, ease: easeIn },
+         transition: { delay: 2, duration: 1, ease: easeIn },
+
         }}
         
         className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pb-2 gap-5">
@@ -72,7 +67,7 @@ const HomeProduct = () => {
             );
           })}
         </motion.div>
-      )}
+      
     </>
   );
 };

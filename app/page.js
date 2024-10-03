@@ -12,7 +12,7 @@ const page = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2, duration: 0.4, ease: easeIn },
+        transition: { delay: 1, duration: 1, ease: easeIn },
       }}
       className="container my-10 flex flex-col md:flex-row justify-between items-center">
         {/* Text Section */}
@@ -20,7 +20,7 @@ const page = () => {
           <em className="text-xl md:text-2xl capitalize text-red-400">Are you hungry?</em>
           <h1 className="text-3xl md:text-4xl font-bold">Don't Wait!</h1>
           <div className="my-3">
-            <Link href='/products' className="bg-yellow-500 rounded-full text-white px-4 py-2 capitalize">
+            <Link href='/products' className="bg-yellow-500 rounded-full hover:bg-yellow-400 text-white px-4 py-2 capitalize">
               order now
             </Link>
           </div>
